@@ -1,0 +1,9 @@
+docker run -it
+    -e POSTGRES_USER="admin"
+    -e POSTGRES_PASSWORD="admin"
+    -e POSTGRES_DB="ny_taxi"
+    -v $(pwd)/ny_taxi_db:/workspaces/DataEngineeringZoomCamp
+    -p 5432:5432
+    postgres:13
+
+    pgcli -h localhost -p 5432 -u admin -d ny_taxi
